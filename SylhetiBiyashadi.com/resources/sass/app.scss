@@ -4,5 +4,12 @@
 // Variables
 @import 'variables';
 
+@import 'header';
+@import 'front-page';
+@import 'page-post';
+@import 'elements';
+@import 'footer';
+@import 'responsive';
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
