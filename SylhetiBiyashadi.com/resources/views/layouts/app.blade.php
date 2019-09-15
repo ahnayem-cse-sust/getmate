@@ -59,6 +59,14 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    @role('admin')
+                                    <a class="dropdown-item" href="{{ route('userlist') }}">
+                                        Users List
+                                    </a>
+                                    @endrole
+                                    <a class="dropdown-item" href="{{ route('editProfile') }}">
+                                        Edit Profile
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -75,6 +83,12 @@
                 </div>
             </div>
         </nav>
+
+        @if(flash()->message)
+            <div>
+                {{ flash()->message }}
+            </div>
+        @endif
 
         <main class="py-4">
             @yield('content')

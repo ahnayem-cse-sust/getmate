@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class LoginController extends Controller
 {
@@ -25,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -36,4 +39,15 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+//    public function login(Request $request)
+//    {
+//        $data = $request->all();
+//        $user = User::where('email',$data['email'])->first();
+//        if(($user->hasRole('admin')) || (!empty($user) && !empty($user->active))) {
+//            return $this->traitLogin($request);
+//        }
+//        flash('My message','danger fade-out');
+//        return back();
+//    }
 }

@@ -11,10 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('landing.land');
-});
+//Route::get('/', function () {
+//    return view('landing.land');
+//});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/editProfile', 'UserController@edit')->name('editProfile');
+Route::post('/storeProfile', 'UserController@store')->name('storeProfile');
+Route::get('/userList', 'UserController@list')->name('userlist');
+Route::get('/activate/{id}', 'UserController@activate')->name('activate');
