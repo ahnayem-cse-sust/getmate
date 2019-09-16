@@ -76,6 +76,11 @@ class UserController extends Controller
             $userDetail->user_id = $authUser->id;
         }
         $userDetail->religion = $reqData['religion'];
+        $userDetail->height = $reqData['height'];
+        $userDetail->gender = $reqData['gender'];
+        $userDetail->qualification = $reqData['qualification'];
+        $userDetail->present_address = $reqData['present_address'];
+        $userDetail->permanent_address = $reqData['permanent_address'];
         $userDetail->save();
         return redirect(route('home'));
     }
