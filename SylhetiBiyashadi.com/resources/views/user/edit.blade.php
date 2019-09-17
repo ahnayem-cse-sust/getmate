@@ -65,7 +65,7 @@
                             <div class="form-group row">
                                     <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Present Address') }}</label>
                                     <div class="col-md-6">
-                                        <input id="present_address" type="text" class="form-control @error('present_address') is-invalid @enderror" name="present_address" value="{{ @$user->userDetail->present_address }}" required autocomplete="present_address" autofocus>
+                                        <textarea id="present_address" type="text" class="form-control @error('present_address') is-invalid @enderror" name="present_address" required autocomplete="present_address" row="5" col="200" autofocus>{{trim(@$user->userDetail->present_address )}}</textarea> 
                                         @error('present_address')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -78,7 +78,7 @@
                             <div class="form-group row">
                                     <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Permanent Address') }}</label>
                                     <div class="col-md-6">
-                                        <input id="permanent_address" type="text" class="form-control @error('permanent_address') is-invalid @enderror" name="permanent_address" value="{{ @$user->userDetail->permanent_address }}" required autocomplete="permanent_address" autofocus>
+                                        <textarea id="permanent_address" type="text" class="form-control @error('permanent_address') is-invalid @enderror" name="permanent_address" required autocomplete="permanent_address" row="5" col="200"  autofocus>{{trim(@$user->userDetail->permanent_address )}}</textarea> 
                                         @error('permanent_address')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>

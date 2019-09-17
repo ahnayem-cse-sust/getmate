@@ -14,7 +14,7 @@
                     </div>
                     @role('user')
                     <div class="col-md-12">
-                        Height: {{@$user->userDetails->height}}
+                        Height: {{@$user->userDetail->height}}
                     </div>
                     <div class="col-md-12">
                         Religion: {{@$user->userDetail->religion}}
