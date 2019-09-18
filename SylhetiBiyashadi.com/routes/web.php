@@ -22,6 +22,11 @@ Route::get('/editProfile', 'UserController@edit')->name('editProfile');
 Route::post('/storeProfile', 'UserController@store')->name('storeProfile');
 Route::get('/userList', 'UserController@list')->name('userlist');
 Route::get('/activate/{id}', 'UserController@activate')->name('activate');
+
 Route::get('/upazila', 'UpazilaController@index')->name('upazila');
 Route::post('/storeUpazila', 'UpazilaController@store')->name('storeUpazila');
 Route::get('/deleteUpazila/{id}', 'UpazilaController@delete')->name('deleteUpazila');
+
+Route::get('/zila', 'zilaController@index')->name('zila');
+Route::post('/storeZila', 'zilaController@store')->name('storeZila');
+Route::get('/deleteZila/{id}', 'zilaController@delete')->name('deleteZila');

@@ -5,14 +5,14 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Add Upazila') }}</div>
+                    <div class="card-header">{{ __('Add Zila') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('storeUpazila') }}">
+                        <form method="POST" action="{{ route('storeZila') }}">
                             @csrf
 
                             <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('upazila') }}</label>
+                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('zila') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="" required autocomplete="name" autofocus>
@@ -36,7 +36,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">{{ __('Upazila List') }}</div>
+                    <div class="card-header">{{ __('Zila List') }}</div>
 
                     <div class="card-body">
 
@@ -48,10 +48,10 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($upazilas as $upazila)
+                            @foreach($zilas as $zila)
                                 <tr>
-                                    <td>{{$upazila->name}}</td>
-                                    <td><a href="/deleteUpazila/{{$upazila->id}}">Delete</a></td>
+                                    <td>{{$zila->name}}</td>
+                                    <td><a href="/deleteZila/{{$zila->id}}">Delete</a></td>
                                 </tr>
                             @endforeach
                             </tbody>
