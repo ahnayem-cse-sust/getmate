@@ -1,0 +1,12 @@
+.sub-title{
+    font-size: 22px;
+    &:before{
+        display: inline-block;
+        content: "";
+        border-top: 5px solid $primary;
+        border-radius: 5px;
+        width: 50px;
+        margin-right: 10px;
+        transform: translateY(-5px);
+    }
+}
