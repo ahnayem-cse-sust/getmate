@@ -77,6 +77,14 @@
   transform: translateX(-50px);
 }
 
+.laravel-paginate {
+  text-align: center;
+}
+
+.laravel-paginate .link {
+  background-color: #1B998B;
+}
+
 .footer-quick-view {
   background-color: #376561;
 }

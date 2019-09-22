@@ -63,6 +63,7 @@
                     </div>
                 @endforeach
             </div>
+{{--            {{ $users->links() }}--}}
         </div>
     </section>
 
@@ -287,6 +288,9 @@
                         </div>
                     </div>
                 @endforeach
+            </div>
+            <div class="laravel-paginate text-center">
+{{--             {{ $users->links() }}--}}
             </div>
         </div>
     </section>
