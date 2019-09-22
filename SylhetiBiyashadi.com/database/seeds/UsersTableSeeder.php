@@ -25,7 +25,6 @@ class UsersTableSeeder extends Seeder
         $userRole = Role::create(['name' => 'user']);
         Role::create(['name' => 'new']);
         $admin->assignRole($adminRole);
-        $admin->assignRole($userRole);
 
         for ($i = 0; $i < 20; $i++){
             $user = User::create([

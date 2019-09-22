@@ -24,9 +24,11 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body  id="app">
-   
+
         @include('layouts.header')
-        @yield('content')
+        <div style="min-height: 58vh">
+            @yield('content')
+        </div>
         @include('layouts.footer')
 </body>
 </html>

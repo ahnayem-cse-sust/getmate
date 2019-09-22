@@ -96,7 +96,9 @@ use UploadTrait;
             // Upload image
             $this->uploadOne($image, $folder, 'public', $name);
             // Set user profile image path in database to filePath
-            @unlink($userDetail->image);
+            if(!($userDetail->image == 'demo.jpg')){
+                @unlink($userDetail->image);
+            }
             $userDetail->image = $filePath;
         }
         $userDetail->save();
