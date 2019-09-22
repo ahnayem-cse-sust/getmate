@@ -5,6 +5,12 @@
   padding: 0;
 }
 
+.header {
+  background-color: #1B998B;
+  font-size: large;
+  font-weight: bold;
+}
+
 .container .col-md-12 {
   text-align: center;
 }
