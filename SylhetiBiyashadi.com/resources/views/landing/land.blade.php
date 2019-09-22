@@ -50,14 +50,14 @@
                             </div>
                             <div class="profile-info">
                                 <p> Name: <span> {{@$user->name}}</span></p>
-                                @role('user')
+                                @hasanyrole('user|admin')
                                 <p> Height: <span>{{@$user->userDetail->height}}</span></p>
                                 <p>Religion: <span>{{@$user->userDetail->religion}}</span></p>
                                 <p>Gender: <span>{{@$user->userDetail->gender}}</span></p>
                                 <p>Qualification: <span>{{@$user->userDetail->qualification}}</span></p>
                                 <p>{Present Address}: <span>{{@$user->userDetail->present_address}}</span></p>
                                 <p>Permanent Address: <span>{{@$user->userDetail->permanent_address}}</span></p>
-                                @endrole
+                                @endhasanyrole
                             </div>
                         </div>
                     </div>
@@ -271,18 +271,18 @@
                     <div class="col-md-3">
                         <div class="user-profile">
                             <div class="profile-image">
-                                <img class="img-fluid" src="{{asset('img/profile-1.jpg')}}">
+                                <img class="img-fluid" src="{{@$user->userDetail->image}}">
                             </div>
                             <div class="profile-info">
                                 <p> Name: <span> {{@$user->name}}</span></p>
-                                @role('user')
+                                @hasanyrole('user|admin')
                                 <p> Height: <span>{{@$user->userDetail->height}}</span></p>
                                 <p>Religion: <span>{{@$user->userDetail->religion}}</span></p>
                                 <p>Gender: <span>{{@$user->userDetail->gender}}</span></p>
                                 <p>Qualification: <span>{{@$user->userDetail->qualification}}</span></p>
                                 <p>{Present Address}: <span>{{@$user->userDetail->present_address}}</span></p>
                                 <p>Permanent Address: <span>{{@$user->userDetail->permanent_address}}</span></p>
-                                @endrole
+                                @endhasanyrole
                             </div>
                         </div>
                     </div>
