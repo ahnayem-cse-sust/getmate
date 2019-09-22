@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = User::role('user')->simplePaginate(8);
+        $users = User::role('user')->get();
         return view('landing.land')->with('users',$users);
     }
 }
