@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@role('user')
+    @guest
     <section class="carosel-section">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -33,7 +33,7 @@
             </a>
         </div>
     </section>
-@endrole
+    @endguest
     <section class="user-moving-section">
     </section>
 
@@ -51,9 +51,9 @@
                             <p> Name: <span> {{@$user->name}}</span></p>
                             @role('user')
                                 <p> Height: <span>{{@$user->userDetail->height}}</span></p>
-                                <p>Religion: <span>{{@$user->userDetail->religion}}</span></p> 
+                                <p>Religion: <span>{{@$user->userDetail->religion}}</span></p>
                             @endrole
-                        </div>     
+                        </div>
                     </div>
                 </div>
                 @endforeach
@@ -65,18 +65,18 @@
 
         <div class="container">
                 <h2 class="section-title text-center">Latest News</h2>
-                
-            
+
+
                 <!--Carousel Wrapper-->
                 <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-            
+
                   <!--Controls-->
                   <div class="controls-top">
                     <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
                     <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
                   </div>
                   <!--/.Controls-->
-            
+
                   <!--Indicators-->
                   <ol class="carousel-indicators">
                     <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
@@ -84,13 +84,13 @@
                     <li data-target="#multi-item-example" data-slide-to="2"></li>
                   </ol>
                   <!--/.Indicators-->
-            
+
                   <!--Slides-->
                   <div class="carousel-inner" role="listbox">
-            
+
                     <!--First slide-->
                     <div class="carousel-item active">
-            
+
                       <div class="row">
                         <div class="col-md-4">
                           <div class="card mb-2">
@@ -104,7 +104,7 @@
                             </div>
                           </div>
                         </div>
-            
+
                         <div class="col-md-4 clearfix d-none d-md-block">
                           <div class="card mb-2">
                             <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
@@ -117,7 +117,7 @@
                             </div>
                           </div>
                         </div>
-            
+
                         <div class="col-md-4 clearfix d-none d-md-block">
                           <div class="card mb-2">
                             <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
@@ -131,13 +131,13 @@
                           </div>
                         </div>
                       </div>
-            
+
                     </div>
                     <!--/.First slide-->
-            
+
                     <!--Second slide-->
                     <div class="carousel-item">
-            
+
                       <div class="row">
                         <div class="col-md-4">
                           <div class="card mb-2">
@@ -151,7 +151,7 @@
                             </div>
                           </div>
                         </div>
-            
+
                         <div class="col-md-4 clearfix d-none d-md-block">
                           <div class="card mb-2">
                             <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg"
@@ -164,7 +164,7 @@
                             </div>
                           </div>
                         </div>
-            
+
                         <div class="col-md-4 clearfix d-none d-md-block">
                           <div class="card mb-2">
                             <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
@@ -178,13 +178,13 @@
                           </div>
                         </div>
                       </div>
-            
+
                     </div>
                     <!--/.Second slide-->
-            
+
                     <!--Third slide-->
                     <div class="carousel-item">
-            
+
                       <div class="row">
                         <div class="col-md-4">
                           <div class="card mb-2">
@@ -198,7 +198,7 @@
                             </div>
                           </div>
                         </div>
-            
+
                         <div class="col-md-4 clearfix d-none d-md-block">
                           <div class="card mb-2">
                             <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg"
@@ -211,7 +211,7 @@
                             </div>
                           </div>
                         </div>
-            
+
                         <div class="col-md-4 clearfix d-none d-md-block">
                           <div class="card mb-2">
                             <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg"
@@ -225,17 +225,17 @@
                           </div>
                         </div>
                       </div>
-            
+
                     </div>
                     <!--/.Third slide-->
-            
+
                   </div>
                   <!--/.Slides-->
-            
+
                 </div>
                 <!--/.Carousel Wrapper-->
-            
-            
+
+
               </div>
         </section>
         <section class="user-section py-4 py-md-5">
@@ -252,15 +252,15 @@
                                     <p> Name: <span> {{@$user->name}}</span></p>
                                     @role('user')
                                         <p> Height: <span>{{@$user->userDetail->height}}</span></p>
-                                        <p>Religion: <span>{{@$user->userDetail->religion}}</span></p> 
+                                        <p>Religion: <span>{{@$user->userDetail->religion}}</span></p>
                                     @endrole
-                                </div>     
+                                </div>
                             </div>
                         </div>
                         @endforeach
                     </div>
                 </div>
             </section>
-    
-        
+
+
 @endsection

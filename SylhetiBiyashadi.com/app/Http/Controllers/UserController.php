@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\UserDetail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
@@ -81,6 +82,8 @@ class UserController extends Controller
         $userDetail->qualification = $reqData['qualification'];
         $userDetail->present_address = $reqData['present_address'];
         $userDetail->permanent_address = $reqData['permanent_address'];
+        $uploadObj = new \App\Http\Service\ImageUploadService();
+        $userDetail->image = $uploadObj->upload($reqData['image']);
         $userDetail->save();
         return redirect(route('home'));
     }
