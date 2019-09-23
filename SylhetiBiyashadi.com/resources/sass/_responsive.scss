@@ -6,7 +6,9 @@
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991px) { 
-
+    .carosel-section .carosel-item-single {
+        height: 600px;
+    }
 }
 //(tablets, less than 992px)
 
@@ -18,6 +20,9 @@
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575px) { 
+    .carosel-section .carosel-item-single {
+        height: 250px;
+    }
 
 }
 //(portrait phones, less than 576px)

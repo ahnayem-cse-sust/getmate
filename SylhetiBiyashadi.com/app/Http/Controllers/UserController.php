@@ -42,6 +42,12 @@ use UploadTrait;
         return view('user.list')->with('users',$users);
     }
 
+
+    public function listDisplay()
+    {
+        $user = User::find($id);
+    }
+
     /**
      * User activate
      * @author Nayem

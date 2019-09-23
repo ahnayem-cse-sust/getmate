@@ -1,11 +1,14 @@
 <header class="header">
-    <nav class="navbar navbar-expand-md navbar-light">
+    <nav class="navbar navbar-expand-md p-0 pr-3 pl-3">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="{{ asset('img/logo.png') }}" alt="logo" srcset="" class="img-fluid logo">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <span class="navbar-toggler-icon">
+                <span class="line top-bar"></span> 
+                <span class="line middle-bar"></span> 
+                <span class="line bottom-bar"></span></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">

@@ -42,21 +42,23 @@
             <h2 class="section-title text-center">Featured Profiles</h2>
             <div class="row">
                 @foreach ($users as $user)
-                    <div class="col-md-3">
+                    <div class="col-xl-3 col-lg-4 col-sm-6 mb-4">
                         <div class="user-profile">
                             <div class="profile-image">
-
                                 <img class="img-fluid" src="{{asset(@$user->userDetail->image)}}">
                             </div>
                             <div class="profile-info">
-                                <p> Name: <span> {{@$user->name}}</span></p>
                                 @hasanyrole('user|admin')
-                                <p> Height: <span>{{@$user->userDetail->height}}</span></p>
-                                <p>Religion: <span>{{@$user->userDetail->religion}}</span></p>
-                                <p>Gender: <span>{{@$user->userDetail->gender}}</span></p>
-                                <p>Qualification: <span>{{@$user->userDetail->qualification}}</span></p>
-                                <p>{Present Address}: <span>{{@$user->userDetail->present_address}}</span></p>
-                                <p>Permanent Address: <span>{{@$user->userDetail->permanent_address}}</span></p>
+                                    <p><span> Name : </span>{{@$user->name}}</p>
+                                @endhasanyrole
+                                <p><span> Height : </span>{{@$user->userDetail->height}}</p>
+                                <p><span>Gender : </span>{{@$user->userDetail->gender}}</p>
+                                <p><span> Qualification : </span>{{@$user->userDetail->qualification}}</p>
+                                <div class="text-center py-2"><a href="{{ url('/login') }}" class="btn btn-common text-center">More Details</a></div>
+                                @hasanyrole('user|admin')
+                                    <p><span>Religion : </span>{{@$user->userDetail->religion}}</p>
+                                    <p><span>Present Address : </span>{{@$user->userDetail->present_address}}</p>
+                                    <p><span> Permanent Address : </span>{{@$user->userDetail->permanent_address}}</p>
                                 @endhasanyrole
                             </div>
                         </div>

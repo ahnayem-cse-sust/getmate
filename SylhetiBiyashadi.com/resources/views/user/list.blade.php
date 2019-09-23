@@ -28,6 +28,22 @@
                             @endforeach
                             </tbody>
                         </table>
+                        <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Details</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($users as $user)
+                                    <tr>
+                                        <td>{{$user->name}}</td>
+                                        <td><a href="#">{{$user->role}}</a></td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

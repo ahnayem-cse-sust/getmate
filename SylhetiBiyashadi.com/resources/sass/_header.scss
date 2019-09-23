@@ -7,3 +7,63 @@
     font-size: large;
     font-weight: bold;
 }
+
+.navbar-expand-md .navbar-nav .nav-link{
+    font-size: 20px;
+    font-weight: 900;
+    //text-transform: uppercase;
+    letter-spacing: -.50px;
+    color: #fff !important;
+    transition:all .4s ease-in-out ;
+    &:hover{
+        color: $secondary !important;
+    }
+}
+
+
+
+
+
+//icon design
+.navbar-toggler{
+    &:focus{
+        outline: 0;
+        outline-color: none !important;
+    }
+    &.collapsed{
+        .top-bar {
+            transform: rotate(0);
+          }
+          .middle-bar {
+            opacity: 1;
+          }
+          .bottom-bar {
+            transform: rotate(0);
+          }
+    }
+    .navbar-toggler-icon{
+        width: 1.1em;
+        height: 1.1em;
+    }
+    .line{
+        width: 100%;
+        float: left;
+        height: 2px;
+        background-color: #fff;
+        transition: ease all .2s;
+        &:not(:last-child){
+            margin-bottom: 5px;
+        }
+    }
+    .top-bar {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+      }
+      .middle-bar {
+        opacity: 0;
+      }
+      .bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+      }
+} 
