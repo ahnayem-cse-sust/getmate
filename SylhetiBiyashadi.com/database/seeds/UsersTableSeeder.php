@@ -26,6 +26,11 @@ class UsersTableSeeder extends Seeder
         Role::create(['name' => 'new']);
         $admin->assignRole($adminRole);
 
+
+        $position = array("Graduate", "Service Holder", "Business Man");
+        $gender = array("Male", "Female");
+        $relagion = array("islam", "hinduism","chirstianity");
+
         for ($i = 0; $i < 20; $i++){
             $user = User::create([
                 'name' => 'User'.$i,
@@ -33,12 +38,15 @@ class UsersTableSeeder extends Seeder
                 'password' => Hash::make('user'.$i),
             ]);
             $user->assignRole($userRole);
+            
             UserDetail::create([
                 'user_id' => $user->id,
-                'religion' => rand(),
+                'religion' => $relagion[rand(0,2)],
                 'height' => rand(),
-                'gender' => rand(),
-                'qualification' => rand(),
+                'gender' => $gender[rand(0,1)],
+                'dateofbirth' => rand(1971,2019).'-01-01',
+                'age' => rand(18,60),
+                'qualification' =>$position[rand(0,2)],
                 'present_address' => rand(),
                 'permanent_address' => rand(),
                 'image' => 'demo.jpg'

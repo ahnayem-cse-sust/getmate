@@ -56,7 +56,19 @@
                                     </select>
                                 </div>
                             </div>
-
+                            {{-- Birth Date --}}
+                            <div class="form-group row">
+                                    <label for="name"
+                                        class="col-md-4 col-form-label text-md-right">{{ __('Birth Date') }}</label>
+                                    <div class="col-md-6">
+                                        <input class="form-control @error('birth') is-invalid @enderror" name="dateofbirth" type="date" value="{{@$user->userDetail->dateofbirth}}" id="date-of-birth-input">
+                                        @error('birth')
+                                        <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
                             {{-- Qualification --}}
                             <div class="form-group row">
                                 <label for="name"

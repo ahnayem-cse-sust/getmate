@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Trailts\UploadTrait;
 use App\User;
 use App\UserDetail;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
@@ -84,9 +85,17 @@ use UploadTrait;
             $userDetail = new UserDetail();
             $userDetail->user_id = $authUser->id;
         }
+        // dd($reqData);
+    
         $userDetail->religion = $reqData['religion'];
         $userDetail->height = $reqData['height'];
         $userDetail->gender = $reqData['gender'];
+        $userDetail->dateofbirth = $reqData['dateofbirth'];
+
+        $date= new Carbon($userDetail->dateofbirth);
+        $curYear =  date('Y')-$date->year; 
+        
+        $userDetail->age = ceil($curYear);
         $userDetail->qualification = $reqData['qualification'];
         $userDetail->present_address = $reqData['present_address'];
         $userDetail->permanent_address = $reqData['permanent_address'];
@@ -157,4 +166,7 @@ use UploadTrait;
     {
         //
     }
+
+
+    
 }
