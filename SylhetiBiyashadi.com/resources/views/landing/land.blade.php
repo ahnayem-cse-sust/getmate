@@ -42,14 +42,15 @@
             @csrf
                     <div class="form-group mx-sm-3 mb-2">
                         <label class="sr-only">Looking For</label>
-                        <select class="form-control" name="gender">
+                        <select class="form-control" name="gender" >
+                            <option value="">Select </option>
                             <option value="female">Bride</option>
                             <option value="male">Groom</option>
                         </select>
                     </div>
                     <div class="form-group mx-sm-3 mb-2">
                             <label class="sr-only">Age</label>
-                        <select class="form-control" name="agefrom">
+                        <select class="form-control" name="agefrom" placeholder>
                             @for($i= 18;$i<$maximum;$i++)
                             <option value="{{$i}}">{{$i}}</option>
                             @endfor
@@ -82,9 +83,9 @@
     <section class="user-section py-4 py-md-5">
         <div class="container">
             <h2 class="section-title text-center">Featured Profiles</h2>
-            <div class="row">
+            <div class="row user-carousal">
                 @foreach ($users as $user)
-                    <div class="col-xl-3 col-lg-4 col-sm-6 mb-4">
+                    <div class="col-xl-3 col-lg-4 col-sm-6 mb-4 ">
                         <div class="user-profile">
                             <div class="profile-image">
                                 <img class="img-fluid" src="{{asset(@$user->userDetail->image)}}">

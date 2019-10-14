@@ -46,13 +46,19 @@ class HomeController extends Controller
     
     public function search(Request $request){
         $data = $request->all();
-        //dd($data);
+        // dd($data);
         $users = User::whereHas('userDetail', function($query) use ($data) {
-            $query->where('gender', $data['gender'])->where('religion', $data['religion'])->whereBetween('age',[$data['agefrom'],$data['ageto']]);
+            if($data['gender']){
+                $query->where('gender', $data['gender']);
+            }
+            if($data['religion']){
+                $query->where('religion', $data['religion']);
+            }
+            //$query->where('gender', $data['gender'])->where('religion', $data['religion'])->whereBetween('age',[$data['agefrom'],$data['ageto']]);
         })->paginate(8);
         // dd($users);
        
-        return view('landing.land')->with('userss',$users);
+        return view('landing.land')->with('users',$users);
     
     }
 }
