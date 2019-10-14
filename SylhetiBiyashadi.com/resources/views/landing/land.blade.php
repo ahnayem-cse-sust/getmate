@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+<?php $maximum= 20;?>
 @section('content')
     @guest
         <section class="carosel-section">
@@ -36,8 +37,8 @@
     @endguest
 
     <section class="search-profile py-5">
-        <div class="container">
-        <form class="form-inline" action="{{route('search')}}" method="POST" role="search">
+        <div class="container text-center">
+        <form class="d-flex justify-content-center" action="{{route('search')}}" method="POST" role="search">
             @csrf
                     <div class="form-group mx-sm-3 mb-2">
                         <label class="sr-only">Looking For</label>
@@ -56,7 +57,7 @@
                     </div>
                     <div class="to">To</div>
                     <div class="form-group mx-sm-3 mb-2">
-                            <label class="sr-only2">Age</label>
+                            <label class="sr-only">Age</label>
                         <select class="form-control" name="ageto">
                             @for($i= 18;$i<$maximum;$i++)
                             <option value="{{$i}}">{{$i}}</option>
@@ -109,7 +110,7 @@
                     </div>
                 @endforeach
             </div>
-            {{$users->links()}}
+            {{-- {{$users->links()}} --}}
         </div>
     </section>
 
@@ -312,7 +313,7 @@
     </section>
     <section class="user-section py-4 py-md-5">
         <div class="container">
-            <h2 class="section-title text-center">Latest Profiles</h2>
+            <h2 class="section-title text-center">All Profiles</h2>
             <div class="row">
                 @foreach ($users as $user)
                     <div class="col-xl-3 col-lg-4 col-sm-6 mb-4">
@@ -326,6 +327,7 @@
                                 @endhasanyrole
                                 <p><span> Height : </span>{{@$user->userDetail->height}}</p>
                                 <p><span>Gender : </span>{{@$user->userDetail->gender}}</p>
+                                <p><span>Age : </span>{{@$user->userDetail->age}}</p>
                                 <p><span> Qualification : </span>{{@$user->userDetail->qualification}}</p>
                                 @guest
                                 <div class="text-center py-2"><a href="{{ url('/login') }}" class="btn btn-common text-center">More Details</a></div>
@@ -340,6 +342,7 @@
                     </div>
                 @endforeach
             </div>
+            {{$users->links()}}
         </div>
     </section>
 

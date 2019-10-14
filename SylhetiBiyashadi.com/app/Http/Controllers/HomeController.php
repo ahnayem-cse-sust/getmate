@@ -38,6 +38,11 @@ class HomeController extends Controller
         return view('landing.land')->with('users',$users)->with('maximum',$maximum);
     }
 
+    public function searchResult($data = null){
+        $users = User::role('user')->all();
+        return view('landing.land')->with('users',$allusers);
+    }
+
     
     public function search(Request $request){
         $data = $request->all();
@@ -46,7 +51,8 @@ class HomeController extends Controller
             $query->where('gender', $data['gender'])->where('religion', $data['religion'])->whereBetween('age',[$data['agefrom'],$data['ageto']]);
         })->paginate(8);
         // dd($users);
-        return $this->index($users);
+       
+        return view('landing.land')->with('userss',$users);
     
     }
 }

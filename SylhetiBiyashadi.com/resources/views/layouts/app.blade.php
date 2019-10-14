@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'SylhetiBiyashadi') }}</title>
+    <title>SylhetiBiyashadi</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -19,6 +19,10 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{{url('css/bootstrap.css')}}">
     <script src="{{url('js/bootstrap.js')}}"></script>
+
+    <!-- Slick Carousal-->
+    <link rel="stylesheet" href="{{url('css/slick.css')}}">
+    <script src="{{url('js/slick.min.js')}}"></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">

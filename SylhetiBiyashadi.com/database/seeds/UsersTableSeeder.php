@@ -31,7 +31,7 @@ class UsersTableSeeder extends Seeder
         $gender = array("Male", "Female");
         $relagion = array("islam", "hinduism","chirstianity");
 
-        for ($i = 0; $i < 20; $i++){
+        for ($i = 0; $i < 50; $i++){
             $user = User::create([
                 'name' => 'User'.$i,
                 'email' => 'user'.$i.'@awsometeam.com',
@@ -45,7 +45,7 @@ class UsersTableSeeder extends Seeder
                 'height' => rand(),
                 'gender' => $gender[rand(0,1)],
                 'dateofbirth' => rand(1971,2019).'-01-01',
-                'age' => rand(18,60),
+                'age' => rand(17,60),
                 'qualification' =>$position[rand(0,2)],
                 'present_address' => rand(),
                 'permanent_address' => rand(),
