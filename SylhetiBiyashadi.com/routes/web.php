@@ -31,3 +31,6 @@ Route::get('/zila', 'zilaController@index')->name('zila');
 Route::post('/storeZila', 'zilaController@store')->name('storeZila');
 Route::get('/deleteZila/{id}', 'zilaController@delete')->name('deleteZila');
 Route::post('/search', 'HomeController@search')->name('search');
+
+#Pages routes
+Route::get('/story', 'PageController@story')->name('story');

@@ -6,8 +6,8 @@
             </a>
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon">
-                <span class="line top-bar"></span> 
-                <span class="line middle-bar"></span> 
+                <span class="line top-bar"></span>
+                <span class="line middle-bar"></span>
                 <span class="line bottom-bar"></span></span>
             </button>
 
@@ -20,8 +20,9 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
+                        <li class="nav-item"><a class="nav-link" href="{{route('home')}}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('story')}}">Story</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Story</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
                     @guest
                         <li class="nav-item">
