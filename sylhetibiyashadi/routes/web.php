@@ -12,7 +12,7 @@
 */
 
 //Route::get('/', function () {
-//    return view('landing.land');
+//    return view('home.land');
 //});
 
 Auth::routes();
@@ -32,7 +32,7 @@ Route::post('/storeZila', 'zilaController@store')->name('storeZila');
 Route::get('/deleteZila/{id}', 'zilaController@delete')->name('deleteZila');
 Route::post('/search', 'HomeController@search')->name('search');
 
-Route::get('/blogs', 'BlogController@list')->name('search');
+Route::get('/blogs', 'BlogController@list')->name('blog');
 
 #Pages routes
 Route::get('/story', 'PageController@story')->name('story');
