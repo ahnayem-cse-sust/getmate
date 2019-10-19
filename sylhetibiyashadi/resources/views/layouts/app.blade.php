@@ -9,19 +9,20 @@
 
     <title>SylhetiBiyashadi</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="{{url('css/bootstrap.css')}}">
-    <script src="{{url('js/bootstrap.js')}}"></script>
+    <link rel="stylesheet" href="{{url('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url('css/slick.css')}}">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{{url('js/bootstrap.min.js')}}"></script>
 
     <!-- Slick Carousal-->
-    <link rel="stylesheet" href="{{url('css/slick.css')}}">
     <script src="{{url('js/slick.min.js')}}"></script>
 
     <!-- Styles -->
@@ -34,5 +35,38 @@
             @yield('content')
         </div>
         @include('layouts.footer')
+    <!-- Scripts -->
+{{--    <script src="{{ asset('js/app.js') }}"></script>--}}
 </body>
 </html>
+
+<script type="text/javascript">
+    $('.user-carousal').slick({
+        dots: false,
+        infinite: false,
+        autoplay: true,
+        arrows: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            }
+        }, {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        }, {
+            breakpoint: 575,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        }]
+    });
+</script>
