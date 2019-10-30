@@ -1,61 +1,30 @@
 .footer-quick-view{
-    background-color:lighten( $tmp-dark, 10%);
-    ul{
-        margin: 0 auto;
+    border-bottom: 2px solid #fcfcfc;
+    a{
+        color: #fff;
+        &:hover{
+            color: #000000;
+        }
     }
+}
+.footer{
+    background-color:lighten( $tmp-dark, 10%);
 }
 .footer-menu{
     li{
         a{
-            font-size: 18px;
+            padding: 15px 30px;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: #fff;
             font-weight: 700;
-            
-            &:before{
-                display: inline-block;
-                content: "";
-                border-top: 5px solid $primary;
-                border-radius: 5px;
-                width: 10px;
-                margin-right: 10px;
-                transform: translateY(-5px);
-                transition:all .4s ease-in-out ;
-            }
+            text-decoration: none;
             &:hover{
-                &:before{
-                    display: inline-block;
-                    content: "";
-                    // border-top: 5px solid $ ;
-                    border-radius: 5px;
-                    width: 50px;
-                    margin-right: 10px;
-                    transform: translateY(-5px);
-                } 
+                color: $tmp-dark;
             }
         }
     }
 }
-
-// .totop {
-//     position: fixed;
-//     bottom: -45px;
-//     right: 15px;
-//     width: 40px;
-//     height: 40px;
-//     border-radius: 3px;
-//     background: #000000;
-//     color: $tmpcolor;
-//     text-align: center;
-//     cursor: pointer;
-//     line-height: 40px;
-//     box-shadow: 0 0 5px rgba(255,255,255,0.3);
-
-//     @extend .transition;
-
-//     &:hover {
-//         color: #fff;
-//         background: lighten(#000000, 15%);
-//     }
-// }
 
 
 
