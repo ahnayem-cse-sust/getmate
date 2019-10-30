@@ -10782,6 +10782,10 @@ a.text-dark:focus {
   color: #fff;
 }
 
+.footer-quick-view a:hover {
+  color: #000000;
+}
+
 .footer {
   background-color: #376561;
 }
