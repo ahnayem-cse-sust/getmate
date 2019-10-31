@@ -22,6 +22,8 @@ Route::get('/editProfile', 'UserController@edit')->name('editProfile');
 Route::post('/storeProfile', 'UserController@store')->name('storeProfile');
 Route::get('/userList', 'UserController@list')->name('userlist');
 Route::get('/activate/{id}', 'UserController@activate')->name('activate');
+Route::get('/deactivate/{id}', 'UserController@deactivate')->name('deactivate');
+Route::get('/userdetails/{id}', 'UserController@userdetails')->name('userdetails');
 
 Route::get('/upazila', 'UpazilaController@index')->name('upazila');
 Route::post('/storeUpazila', 'UpazilaController@store')->name('storeUpazila');

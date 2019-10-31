@@ -39,8 +39,9 @@ use UploadTrait;
      */
     public function list()
     {
-        $users = User::role('new')->get();
-        return view('user.list')->with('users',$users);
+        $news = User::role('new')->paginate(10);
+        $users = User::role('user')->paginate(10);
+        return view('user.list')->with('users',$users)->with('news',$news);
     }
 
 
@@ -60,6 +61,20 @@ use UploadTrait;
         return back();
     }
 
+    public function deactivate($id)
+    {
+        $user = User::find($id);
+        $user->syncRoles('new');
+        return back();
+    }
+    public function userdetails($id)
+    {
+        $user = User::find($id);
+        dd($user);
+        return back();
+    }
+
+    
     /**
      * Show the form for creating a new resource.
      *
