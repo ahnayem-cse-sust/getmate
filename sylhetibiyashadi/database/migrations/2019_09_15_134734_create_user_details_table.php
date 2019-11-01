@@ -19,10 +19,13 @@ class CreateUserDetailsTable extends Migration
             $table->string('religion')->nullable();
             $table->string('image')->nullable();
             $table->string('height')->nullable();
+            $table->string('weight')->nullable();
+            $table->string('skin_color')->nullable();
             $table->string('gender')->nullable();
             $table->date('dateofbirth')->nullable();
             $table->integer('age')->nullable();
             $table->string('qualification')->nullable();
+            $table->string('profession')->nullable();
             $table->string('present_address')->nullable();
             $table->string('permanent_address')->nullable();
             $table->timestamps();

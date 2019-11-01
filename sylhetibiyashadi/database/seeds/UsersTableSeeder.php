@@ -30,6 +30,7 @@ class UsersTableSeeder extends Seeder
         $position = array("Graduate", "Service Holder", "Business Man");
         $gender = array("Male", "Female");
         $relagion = array("islam", "hinduism","chirstianity");
+        $skin_color = array("White", "Medium","fair","Brown");
 
         for ($i = 0; $i < 50; $i++){
             $user = User::create([
@@ -43,10 +44,13 @@ class UsersTableSeeder extends Seeder
                 'user_id' => $user->id,
                 'religion' => $relagion[rand(0,2)],
                 'height' => rand(),
+                'weight' => rand(),
+                'skin_color' => $skin_color[rand(0,3)],
                 'gender' => $gender[rand(0,1)],
                 'dateofbirth' => rand(1971,2019).'-01-01',
                 'age' => rand(17,60),
                 'qualification' =>$position[rand(0,2)],
+                'profession' =>$position[rand(0,2)],
                 'present_address' => rand(),
                 'permanent_address' => rand(),
                 'image' => 'demo.jpg'

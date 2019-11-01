@@ -11,7 +11,7 @@ class BlogController extends Controller
 
         $blogs = Blog::all();
         // dd($blogs[1]);
-        return view('home.land')->with('blogs',$blogs);
+        return view('pages.story')->with('blogs',$blogs);
         //return view('home.land')->with('users',$users);
 
     }

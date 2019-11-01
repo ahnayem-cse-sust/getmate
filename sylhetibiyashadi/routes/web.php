@@ -37,4 +37,4 @@ Route::post('/search', 'HomeController@search')->name('search');
 Route::get('/blogs', 'BlogController@list')->name('blog');
 
 #Pages routes
-Route::get('/story', 'PageController@story')->name('story');
+Route::get('/story', 'BlogController@list')->name('story');

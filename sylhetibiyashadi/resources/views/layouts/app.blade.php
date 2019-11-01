@@ -41,7 +41,7 @@
 </html>
 
 <script type="text/javascript">
-    $('.user-carousal').slick({
+    $('.blog-carousal').slick({
         dots: false,
         infinite: false,
         autoplay: true,
