@@ -10778,6 +10778,27 @@ a.text-dark:focus {
   background-color: #1B998B;
 }
 
+.blog-single-carousal {
+  margin: 0 15px;
+}
+
+.slick-next {
+  position: absolute;
+  top: 50%;
+  right: -15px;
+}
+
+.slick-prev {
+  position: absolute;
+  top: 50%;
+  left: -15px;
+}
+
+.slick-prev i,
+.slick-next i {
+  font-size: 25px;
+}
+
 .footer {
   background-color: #376561;
 }

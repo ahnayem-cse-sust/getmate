@@ -17,7 +17,7 @@ class BlogsSeeder extends Seeder
             Blog::create([
                 'user_id' => rand(),
                 'title' => rand(),
-                'thum_link' => rand(),
+                'thum_link' => 'blog.jpg',
                 'description' => rand()
             ]);
         }

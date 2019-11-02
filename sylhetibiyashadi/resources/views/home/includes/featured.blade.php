@@ -6,7 +6,7 @@
                 <div class="col-xl-3 col-lg-4 col-sm-6 mb-4 ">
                     <div class="user-profile">
                         <div class="profile-image">
-                            <img class="img-fluid" src="{{asset(@$user->userDetail->image)}}">
+                            <img class="img-fluid" src="{{asset(@$user->userDetail->image)}}" alt="profile-thum">
                         </div>
                         <div class="profile-info">
                             @hasanyrole('user|admin')
