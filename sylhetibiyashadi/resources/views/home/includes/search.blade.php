@@ -4,7 +4,7 @@
             @role('admin')
             <div class="form-group mx-sm-3 mb-2">
                 <label class="">Id number : </label>
-                <input type="number" name="user_id" class="form-control">
+                <input type="number" name="user_id" class="form-control" value="{{(isset($searchData['user_id']) && !empty($searchData['user_id'])) ? $searchData['user_id'] : ''}}">
             </div>
             @endrole
 

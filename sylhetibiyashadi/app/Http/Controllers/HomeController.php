@@ -30,9 +30,10 @@ class HomeController extends Controller
         $data = $request->all();
 //        dd($data);
         if (!empty($data['user_id'])) {
-            $id = 400950 - $data['user_id'];
-            $users = User::where('id', '=', $id)->paginate(8);
-            return $this->index($users);
+            $id = $data['user_id'] - 400950;
+            $users = User::where('id', '=', $id)->whereHas('userDetail')->paginate(8);
+            $users = $users->appends($data);
+            return view('home.index')->with('users', $users)->with('maximum', $maximum)->with('searchData',$data);
         }
         $users = User::whereHas('userDetail', function ($query) use ($data) {
             if (isset($data['gender'])) {
