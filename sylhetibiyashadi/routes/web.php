@@ -32,7 +32,8 @@ Route::get('/deleteUpazila/{id}', 'UpazilaController@delete')->name('deleteUpazi
 Route::get('/zila', 'zilaController@index')->name('zila');
 Route::post('/storeZila', 'zilaController@store')->name('storeZila');
 Route::get('/deleteZila/{id}', 'zilaController@delete')->name('deleteZila');
-Route::post('/search', 'HomeController@search')->name('search');
+//Route::post('/search', 'HomeController@search')->name('search');
+Route::get('/search', 'HomeController@search')->name('search');
 
 Route::get('/blogs', 'BlogController@list')->name('blog');
 

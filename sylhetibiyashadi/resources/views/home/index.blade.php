@@ -23,6 +23,7 @@
                                 <img class="img-fluid" src="{{asset(@$user->userDetail->image)}}">
                             </div>
                             <div class="profile-info">
+                                    <p><span> ID : </span>{{$user->id+400950}}</p>
                                 @hasanyrole('user|admin')
                                     <p><span> Name : </span>{{@$user->name}}</p>
                                 @endhasanyrole

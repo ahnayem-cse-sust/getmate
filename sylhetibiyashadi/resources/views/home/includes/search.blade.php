@@ -1,19 +1,28 @@
 <section class="search-profile py-5">
     <div class="container text-center">
-        <form class="d-flex justify-content-center" action="{{route('search')}}" method="POST" role="search">
-            @csrf
+        <form class="d-flex justify-content-center" action="{{route('search')}}" method="GET" role="search">
+            @role('admin')
+            <div class="form-group mx-sm-3 mb-2">
+                <label class="">Id number : </label>
+                <input type="number" name="user_id" class="form-control">
+            </div>
+            @endrole
+
             <div class="form-group mx-sm-3 mb-2">
                 <label class="sr-only">Looking For</label>
+<!--                --><?php
+//                dd($searchData);
+//                ?>
                 <select class="form-control" name="gender">
                     <option value="">Bride/Groom</option>
-                    <option value="female">Bride</option>
-                    <option value="male">Groom</option>
+                    <option value="female" {{(isset($searchData['gender']) && $searchData['gender'] == 'female') ? 'selected' : ''}}>Bride</option>
+                    <option value="male" {{(isset($searchData['gender']) && $searchData['gender'] == 'male') ? 'selected' : ''}}>Groom</option>
                 </select>
             </div>
             <div class="form-group mx-sm-3 mb-2">
                 <label class="sr-only">Age</label>
                 <select class="form-control" name="agefrom">
-                        <option value="">Age from</option>
+                    <option value="">Age from</option>
                     @for($i= 18;$i<$maximum;$i++)
                         <option value="{{$i}}">{{$i}}</option>
                     @endfor
@@ -23,7 +32,7 @@
             <div class="form-group mx-sm-3 mb-2">
                 <label class="sr-only">Age</label>
                 <select class="form-control" name="ageto">
-                        <option value="">Age to</option>
+                    <option value="">Age to</option>
                     @for($i= 18;$i<$maximum;$i++)
                         <option value="{{$i}}">{{$i}}</option>
                     @endfor
@@ -42,3 +51,4 @@
         </form>
     </div>
 </section>
+
