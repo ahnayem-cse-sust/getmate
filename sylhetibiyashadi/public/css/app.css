@@ -10774,8 +10774,13 @@ a.text-dark:focus {
   padding-right: 10px;
 }
 
-.blog-section {
-  background-color: #1B998B;
+.btn-search {
+  background: #1B998B;
+  color: #fff;
+}
+
+.btn-search:hover {
+  background: #136e64;
 }
 
 .blog-single-carousal {

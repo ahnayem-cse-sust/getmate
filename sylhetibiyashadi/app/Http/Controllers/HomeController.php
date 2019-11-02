@@ -46,7 +46,7 @@ class HomeController extends Controller
                 $query->where('age', '>=', $data['agefrom']);
             }
             if (isset($data['ageto'])) {
-                $query->where('age', '<=', $data['agefrom']);
+                $query->where('age', '<=', $data['ageto']);
             }
         })->paginate(8);
 
