@@ -70,7 +70,7 @@ use UploadTrait;
     public function userdetails($id)
     {
         $user = User::find($id);
-        dd($user);
+       // dd($user);
         return back();
     }
 
