@@ -11,7 +11,7 @@
                 </div>
                 @endforeach
         </div> --}}
-        <form method="POST" action="{{ route('blog.store') }}">
+        <form method="POST" action="{{ route('blog.store') }}" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" required autocomplete="title" placeholder="Title" autofocus>
@@ -26,15 +26,7 @@
             </div>
              {{-- Image Upload --}}
              <div class="form-group">
-               
-                
                 <input type="file" name="image" class="form-control">
-                @error('permanent_address')
-                <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-                
             </div>
 
             <div class="form-group row mb-0">

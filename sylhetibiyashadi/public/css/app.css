@@ -10804,6 +10804,16 @@ a.text-dark:focus {
   font-size: 25px;
 }
 
+.blog-single {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.09);
+}
+
+.entry-meta {
+  padding: 10px;
+  margin: 10px 0;
+  background: rgba(0, 0, 0, 0.09);
+}
+
 .footer {
   background-color: #376561;
 }
