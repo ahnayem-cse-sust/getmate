@@ -20,7 +20,11 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6 mb-4">
                         <div class="user-profile">
                             <div class="profile-image">
-                                <img class="img-fluid" src="{{asset(@$user->userDetail->image)}}">
+                                    @if(!empty($user->userDetail->image))
+                                    <img src="{{asset(@$user->userDetail->image)}}" alt="blog thum" class="img-fluid">
+                                    @else
+                                    <img src="{{ asset('img/profile/no-person.png') }}" alt="blog thum" class="img-fluid">
+                                    @endif
                             </div>
                             <div class="profile-info">
                                     <p><span> ID : </span>{{$user->id+400950}}</p>

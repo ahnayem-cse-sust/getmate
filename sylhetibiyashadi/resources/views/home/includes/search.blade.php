@@ -47,7 +47,7 @@
                     <option value="chirstianity" {{(isset($searchData['religion']) && $searchData['religion'] == 'chirstianity') ? 'selected' : ''}}>Chirstianity</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-search mb-2">Search</button>
+            <button type="submit" class="btn btn-common mb-2">Search</button>
         </form>
     </div>
 </section>

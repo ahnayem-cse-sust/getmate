@@ -21,8 +21,8 @@
                 <li class="list-inline-item"><a href="#">About Us</a></li>
                 <li class="list-inline-item"><a href="{{route('story')}}">Story</a></li>
                 <li class="list-inline-item"><a href="#">Contact us</a></li>
-                <li class="list-inline-item"><a href="#">Login</a></li>
-                <li class="list-inline-item"><a href="#">Sign Up</a></li>
+                {{-- <li class="list-inline-item"><a href="#">Login</a></li>
+                <li class="list-inline-item"><a href="#">Sign Up</a></li> --}}
             </ul>
         </div>
     </div>

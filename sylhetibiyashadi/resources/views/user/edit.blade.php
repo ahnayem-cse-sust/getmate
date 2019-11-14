@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
@@ -15,7 +15,7 @@
                                 <label for="name"
                                        class="col-md-4 col-form-label text-md-right">{{ __('Religion') }}</label>
 
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <input id="religion" type="text"
                                            class="form-control @error('religion') is-invalid @enderror" name="religion"
                                            value="{{ @$user->userDetail->religion }}" required autocomplete="religion"
@@ -32,7 +32,7 @@
                                 <label for="name"
                                        class="col-md-4 col-form-label text-md-right">{{ __('Height') }}</label>
 
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <input id="height" type="text"
                                            class="form-control @error('height') is-invalid @enderror" name="height"
                                            value="{{ @$user->userDetail->height }}" required autocomplete="height"
@@ -48,10 +48,9 @@
                             <div class="form-group row">
                                 <label for="name"
                                        class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <select class="form-control" name="gender" id="gender" value="female">
                                         <option value="male">Male</option>
-
                                         <option value="female">Female</option>
                                     </select>
                                 </div>
@@ -60,7 +59,7 @@
                             <div class="form-group row">
                                     <label for="name"
                                         class="col-md-4 col-form-label text-md-right">{{ __('Birth Date') }}</label>
-                                    <div class="col-md-6">
+                                    <div class="col-md-8">
                                         <input class="form-control @error('birth') is-invalid @enderror" name="dateofbirth" type="date" value="{{@$user->userDetail->dateofbirth}}" id="date-of-birth-input">
                                         @error('birth')
                                         <span class="invalid-feedback" role="alert">
@@ -73,7 +72,7 @@
                             <div class="form-group row">
                                 <label for="name"
                                        class="col-md-4 col-form-label text-md-right">{{ __('Qualification') }}</label>
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <input id="qualification" type="text"
                                            class="form-control @error('qualification') is-invalid @enderror"
                                            name="qualification" value="{{ @$user->userDetail->qualification }}" required
@@ -90,7 +89,7 @@
                             <div class="form-group row">
                                 <label for="name"
                                        class="col-md-4 col-form-label text-md-right">{{ __('Present Address') }}</label>
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <textarea id="present_address" type="text"
                                               class="form-control @error('present_address') is-invalid @enderror"
                                               name="present_address" required autocomplete="present_address" row="5"
@@ -108,7 +107,7 @@
                             <div class="form-group row">
                                 <label for="name"
                                        class="col-md-4 col-form-label text-md-right">{{ __('Permanent Address') }}</label>
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <textarea id="permanent_address" type="text"
                                               class="form-control @error('permanent_address') is-invalid @enderror"
                                               name="permanent_address" required autocomplete="permanent_address" row="5"
@@ -126,7 +125,7 @@
                             <div class="form-group row">
                                 <label for="name"
                                        class="col-md-4 col-form-label text-md-right">{{ __('Upload Image') }}</label>
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <input type="file" name="image" class="form-control">
                                     @error('permanent_address')
                                     <span class="invalid-feedback" role="alert">
@@ -139,8 +138,8 @@
                             {{-- Submit --}}
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        {{ __('Update') }}
+                                    <button type="submit" class="btn btn-common">
+                                        {{ __('Save') }}
                                     </button>
                                 </div>
                             </div>

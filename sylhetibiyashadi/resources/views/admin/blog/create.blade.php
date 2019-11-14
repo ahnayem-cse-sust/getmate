@@ -22,19 +22,17 @@
                 @enderror
             </div>
             <div class="form-group">
-                <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3" value="{{ old('body') }}" placeholder="Story Body"></textarea>
+                <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="10" value="{{ old('body') }}" placeholder="Story Body"></textarea>
             </div>
              {{-- Image Upload --}}
              <div class="form-group">
                 <input type="file" name="image" class="form-control">
             </div>
 
-            <div class="form-group row mb-0">
-                <div class="col-md-6 offset-md-4">
-                    <button type="submit" class="btn btn-primary">
-                        {{ __('Save') }}
-                    </button>
-                </div>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-common">
+                    {{ __('Save') }}
+                </button>
             </div>
         </form>
     </div>

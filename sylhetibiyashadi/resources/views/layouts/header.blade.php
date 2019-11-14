@@ -44,6 +44,9 @@
                                 <a class="dropdown-item" href="{{ route('userlist') }}">
                                     Users List
                                 </a>
+                                <a class="dropdown-item" href="{{ route('blog.create') }}">
+                                    Add Blog
+                                </a>
                                 {{-- <a class="dropdown-item" href="{{ route('addBlog') }}">
                                     Add Blog
                                 </a> --}}
