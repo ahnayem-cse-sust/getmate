@@ -9,6 +9,10 @@
             <div class="carousel-item active">
                 <div class="carosel-item-single" style="background-image: url({{ asset('img/banner1.jpg') }});">
                 </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>.dxcv..</h5>
+                    <p>..cxvx.</p>
+                </div>
             </div>
             <div class="carousel-item">
                 <div class="carosel-item-single" style="background-image: url({{ asset('img/banner2.jpg') }});">
