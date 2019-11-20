@@ -11065,6 +11065,14 @@ a.text-dark:focus {
   background-color: rgba(27, 153, 139, 0.7);
 }
 
+.form-control {
+  background: linear-gradient(to bottom, #fff 0%, #f3f3f3 100%);
+}
+
+textarea.form-control {
+  height: 123px;
+}
+
 @media (max-width: 991px) {
   .carosel-section .carosel-item-single {
     height: 600px;

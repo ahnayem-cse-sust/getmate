@@ -41,3 +41,5 @@ Route::post('/blog/store', 'BlogController@store')->name('blog.store');
 
 #Pages routes
 Route::get('/story', 'BlogController@list')->name('story');
+Route::get('/about', 'PageController@aboutUs')->name('about');
+Route::get('/contact', 'PageController@contactUs')->name('contact');

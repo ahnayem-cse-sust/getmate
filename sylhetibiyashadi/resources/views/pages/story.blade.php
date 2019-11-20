@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="container py-5">
-        <h2 class="section-title text-center">Latest News</h2>
+        <h2 class="section-title text-center">Our Success Story</h2>
         <div class="row">
                 @foreach ($blogs as $blog)
                 <?php// dd($blog); ?>
-                <div class="col-md-6 mb-5">
+                <div class="col-md-12 mb-5">
                     <div class="blog-single position-relative">
                         <div class="thum">
                             @if(!empty($blog->thum_link))
