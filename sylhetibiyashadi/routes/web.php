@@ -43,3 +43,9 @@ Route::post('/blog/store', 'BlogController@store')->name('blog.store');
 Route::get('/story', 'BlogController@list')->name('story');
 Route::get('/about', 'PageController@aboutUs')->name('about');
 Route::get('/contact', 'PageController@contactUs')->name('contact');
+Route::post('/contact', 'SendEmailController@send')->name('contactmail');
+
+// Route::post('/contact',function(Request $request){
+//     Mail::send(new SendEmail($request));
+//     return redirect('/');
+// });

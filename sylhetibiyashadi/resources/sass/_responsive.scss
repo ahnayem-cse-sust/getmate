@@ -29,6 +29,11 @@
 
 // Extra small devices (portrait phones, less than 481px)
 @media (max-width: 480px) { 
+    .carousel-caption{
+        font-size: 9px !important;
+        left: 25px !important;
+        right: 25px !important;
+    }
 
 }
 //(portrait phones, less than 481px)
