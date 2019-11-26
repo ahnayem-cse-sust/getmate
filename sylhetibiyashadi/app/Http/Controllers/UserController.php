@@ -39,8 +39,9 @@ use UploadTrait;
      */
     public function list()
     {
-        $users = User::role('new')->get();
-        return view('user.list')->with('users',$users);
+        $news = User::role('new')->paginate(10);
+        $users = User::role('user')->paginate(10);
+        return view('user.list')->with('users',$users)->with('news',$news);
     }
 
 
@@ -60,6 +61,20 @@ use UploadTrait;
         return back();
     }
 
+    public function deactivate($id)
+    {
+        $user = User::find($id);
+        $user->syncRoles('new');
+        return back();
+    }
+    public function userdetails($id)
+    {
+        $user = User::find($id);
+       // dd($user);
+        return back();
+    }
+
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -81,15 +96,19 @@ use UploadTrait;
         $reqData = $request->all();
         $authUser = Auth::user();
         $userDetail = UserDetail::where('user_id',$authUser->id)->first();
+        $user = User::where('id',$authUser->id)->first();
+
         if (empty($userDetail)){
             $userDetail = new UserDetail();
             $userDetail->user_id = $authUser->id;
         }
-        // dd($reqData);
-    
+        //dd($reqData);
+        $user->name = $reqData['name'];
+        $user->email = $reqData['email'];
         $userDetail->religion = $reqData['religion'];
-        $userDetail->height = $reqData['height'];
         $userDetail->gender = $reqData['gender'];
+        $userDetail->height = $reqData['height'];
+        $userDetail->weight = $reqData['weight'];
         $userDetail->dateofbirth = $reqData['dateofbirth'];
 
         $date= new Carbon($userDetail->dateofbirth);
@@ -97,6 +116,8 @@ use UploadTrait;
         
         $userDetail->age = ceil($curYear);
         $userDetail->qualification = $reqData['qualification'];
+        $userDetail->profession = $reqData['profession'];
+        $userDetail->skin_color = $reqData['skin_color'];
         $userDetail->present_address = $reqData['present_address'];
         $userDetail->permanent_address = $reqData['permanent_address'];
         if ($request->has('image')) {
@@ -117,6 +138,7 @@ use UploadTrait;
             $userDetail->image = $filePath;
         }
         $userDetail->save();
+        $user->save();
         return redirect(route('home'));
     }
 

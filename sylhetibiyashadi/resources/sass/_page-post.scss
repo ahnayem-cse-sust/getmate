@@ -1,0 +1,29 @@
+.blog-single-carousal{
+    margin: 0 15px;
+}
+.slick-next{
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    
+    
+}
+.slick-prev{
+    position: absolute;
+    top: 50%;
+    left: -15px;
+}
+.slick-prev,.slick-next{
+    i{
+        font-size: 25px;
+    }
+}
+.blog-single{
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.09);
+    //padding: 10px;
+}
+.entry-meta{
+    padding: 10px;
+    margin: 10px 0;
+    background: rgba(0, 0, 0, 0.09);
+}

@@ -21,9 +21,9 @@
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
                         <li class="nav-item"><a class="nav-link" href="{{route('home')}}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{route('story')}}">Story</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('blog')}}">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('about')}}">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('contact')}}">Contact Us</a></li>
                     @guest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -44,6 +44,12 @@
                                 <a class="dropdown-item" href="{{ route('userlist') }}">
                                     Users List
                                 </a>
+                                <a class="dropdown-item" href="{{ route('blog.create') }}">
+                                    Add Blog
+                                </a>
+                                {{-- <a class="dropdown-item" href="{{ route('addBlog') }}">
+                                    Add Blog
+                                </a> --}}
                                 @endrole
                                 <a class="dropdown-item" href="{{ route('editProfile') }}">
                                     Edit Profile

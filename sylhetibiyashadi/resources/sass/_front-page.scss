@@ -46,6 +46,10 @@
 }
 
 
-.blog-section{
-    background-color:$primary;
+.btn-search{
+    background: $primary;
+    color: #fff;
+    &:hover{
+        background: darken($primary,10);
+    }
 }

@@ -1,6 +1,6 @@
 <?php
 
-use App\Blog;
+use App\Models\Blog;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -13,13 +13,13 @@ class BlogsSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 10; $i++){
-            Blog::create([
-                'user_id' => rand(),
-                'title' => rand(),
-                'thum_link' => rand(),
-                'description' => rand()
-            ]);
-        }
+        // for ($i = 0; $i < 10; $i++){
+        //     Blog::create([
+        //         'user_id' => rand(),
+        //         'title' => rand(),
+        //         'thum_link' => 'blog.jpg',
+        //         'description' => rand()
+        //     ]);
+        // }
     }
 }

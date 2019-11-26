@@ -1,7 +1,11 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
+<<<<<<< HEAD
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+=======
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+>>>>>>> 35c2dbe4c425b90c551166bcb72fe59c2eee8ac7
         "This file is @generated automatically"
     ],
     "content-hash": "f7480344c7d9b4a46f77101cd6d2fa25",
@@ -1472,6 +1476,7 @@
         },
         {
             "name": "spatie/laravel-permission",
+<<<<<<< HEAD
             "version": "3.2.0",
             "source": {
                 "type": "git",
@@ -1482,6 +1487,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/e3821559c69b2b1ea8fdd967fa89ba13a01ead78",
                 "reference": "e3821559c69b2b1ea8fdd967fa89ba13a01ead78",
+=======
+            "version": "3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-permission.git",
+                "reference": "3dbab1c2b2bf721d5ff25b6435ad3f2ff7d45e42"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/3dbab1c2b2bf721d5ff25b6435ad3f2ff7d45e42",
+                "reference": "3dbab1c2b2bf721d5ff25b6435ad3f2ff7d45e42",
+>>>>>>> 35c2dbe4c425b90c551166bcb72fe59c2eee8ac7
                 "shasum": ""
             },
             "require": {
@@ -1536,7 +1553,11 @@
                 "security",
                 "spatie"
             ],
+<<<<<<< HEAD
             "time": "2019-10-16T19:25:56+00:00"
+=======
+            "time": "2019-11-22T05:26:59+00:00"
+>>>>>>> 35c2dbe4c425b90c551166bcb72fe59c2eee8ac7
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3459,6 +3480,7 @@
             "time": "2016-01-20T08:20:44+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "illuminate/filesystem",
             "version": "v6.4.1",
             "source": {
@@ -3511,6 +3533,8 @@
             "time": "2019-10-27T20:14:21+00:00"
         },
         {
+=======
+>>>>>>> 35c2dbe4c425b90c551166bcb72fe59c2eee8ac7
             "name": "laravel/ui",
             "version": "v1.1.1",
             "source": {
@@ -3569,6 +3593,7 @@
         },
         {
             "name": "mockery/mockery",
+<<<<<<< HEAD
             "version": "1.2.4",
             "source": {
                 "type": "git",
@@ -3579,12 +3604,29 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/mockery/mockery/zipball/b3453f75fd23d9fd41685f2148f4abeacabc6405",
                 "reference": "b3453f75fd23d9fd41685f2148f4abeacabc6405",
+=======
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mockery/mockery.git",
+                "reference": "5571962a4f733fbb57bede39778f71647fae8e66"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/5571962a4f733fbb57bede39778f71647fae8e66",
+                "reference": "5571962a4f733fbb57bede39778f71647fae8e66",
+>>>>>>> 35c2dbe4c425b90c551166bcb72fe59c2eee8ac7
                 "shasum": ""
             },
             "require": {
                 "hamcrest/hamcrest-php": "~2.0",
                 "lib-pcre": ">=7.0",
+<<<<<<< HEAD
                 "php": ">=5.6.0"
+=======
+                "php": ">=5.6.0",
+                "sebastian/comparator": "^1.2.4|^3.0"
+>>>>>>> 35c2dbe4c425b90c551166bcb72fe59c2eee8ac7
             },
             "require-dev": {
                 "phpunit/phpunit": "~5.7.10|~6.5|~7.0|~8.0"
@@ -3630,7 +3672,11 @@
                 "test double",
                 "testing"
             ],
+<<<<<<< HEAD
             "time": "2019-09-30T08:30:27+00:00"
+=======
+            "time": "2019-11-24T07:54:50+00:00"
+>>>>>>> 35c2dbe4c425b90c551166bcb72fe59c2eee8ac7
         },
         {
             "name": "myclabs/deep-copy",
@@ -5118,6 +5164,7 @@
         },
         {
             "name": "webmozart/assert",
+<<<<<<< HEAD
             "version": "1.5.0",
             "source": {
                 "type": "git",
@@ -5128,21 +5175,42 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/webmozart/assert/zipball/88e6d84706d09a236046d686bbea96f07b3a34f4",
                 "reference": "88e6d84706d09a236046d686bbea96f07b3a34f4",
+=======
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmozart/assert.git",
+                "reference": "573381c0a64f155a0d9a23f4b0c797194805b925"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/573381c0a64f155a0d9a23f4b0c797194805b925",
+                "reference": "573381c0a64f155a0d9a23f4b0c797194805b925",
+>>>>>>> 35c2dbe4c425b90c551166bcb72fe59c2eee8ac7
                 "shasum": ""
             },
             "require": {
                 "php": "^5.3.3 || ^7.0",
                 "symfony/polyfill-ctype": "^1.8"
             },
+<<<<<<< HEAD
+=======
+            "conflict": {
+                "vimeo/psalm": "<3.6.0"
+            },
+>>>>>>> 35c2dbe4c425b90c551166bcb72fe59c2eee8ac7
             "require-dev": {
                 "phpunit/phpunit": "^4.8.36 || ^7.5.13"
             },
             "type": "library",
+<<<<<<< HEAD
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.3-dev"
                 }
             },
+=======
+>>>>>>> 35c2dbe4c425b90c551166bcb72fe59c2eee8ac7
             "autoload": {
                 "psr-4": {
                     "Webmozart\\Assert\\": "src/"
@@ -5164,7 +5232,11 @@
                 "check",
                 "validate"
             ],
+<<<<<<< HEAD
             "time": "2019-08-24T08:43:50+00:00"
+=======
+            "time": "2019-11-24T13:36:37+00:00"
+>>>>>>> 35c2dbe4c425b90c551166bcb72fe59c2eee8ac7
         }
     ],
     "aliases": [],

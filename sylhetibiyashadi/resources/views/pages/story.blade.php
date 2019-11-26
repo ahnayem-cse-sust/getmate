@@ -1,203 +1,36 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="blog-section position-relative py-md-5 py-4">
-
-        <div class="container">
-            <h2 class="section-title text-center">Latest News</h2>
-
-
-            <!--Carousel Wrapper-->
-            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-
-                <!--Controls-->
-                <div class="controls-top">
-                    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i
-                            class="fa fa-chevron-left"></i></a>
-                    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
-                            class="fa fa-chevron-right"></i></a>
+    <div class="container py-5">
+        {{-- <h2 class="section-title text-center">Our Success Story</h2> --}}
+        <div class="row">
+                @foreach ($blogs as $blog)
+                <div class="col-md-12 mb-5">
+                    <div class="blog-single position-relative">
+                        <div class="thum">
+                            @if(!empty($blog->thum_link))
+                            <img src="{{$blog->thum_link}}" alt="blog thum" class="img-fluid">
+                            @else
+                            <img src="{{ asset('img/blog/no-image.png') }}" alt="blog thum" class="img-fluid">
+                            @endif
+                        </div>
+                        <div class="entry-meta d-flex">
+                            <div class="entry-by pr-4">
+                                <span><b>Posted by - </b> </span>
+                                <span> Sylheti Biyashadi</span>
+                            </div>
+                            <div class="entry-category pl-4">
+                                <span><b> Date -</b></span>
+                                <span>{{$blog->created_at->format('d/m/Y')}}</span>
+                            </div>
+                        </div>
+                        <h3 class="section-sub-title">{{$blog->title}}</h3>
+                        <p id="full " class="text-left p-5">{!!nl2br(e($blog->description))!!}</p>
+                    </div>
                 </div>
-                <!--/.Controls-->
-
-                <!--Indicators-->
-                <ol class="carousel-indicators">
-                    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                    <li data-target="#multi-item-example" data-slide-to="1"></li>
-                    <li data-target="#multi-item-example" data-slide-to="2"></li>
-                </ol>
-                <!--/.Indicators-->
-
-                <!--Slides-->
-                <div class="carousel-inner" role="listbox">
-
-                    <!--First slide-->
-                    <div class="carousel-item active">
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card mb-2">
-                                    <img class="card-img-top"
-                                         src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-                                         alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Card title</h4>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the
-                                            card's content.</p>
-                                        <a class="btn btn-primary">Button</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="card mb-2">
-                                    <img class="card-img-top"
-                                         src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                                         alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Card title</h4>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the
-                                            card's content.</p>
-                                        <a class="btn btn-primary">Button</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="card mb-2">
-                                    <img class="card-img-top"
-                                         src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-                                         alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Card title</h4>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the
-                                            card's content.</p>
-                                        <a class="btn btn-primary">Button</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!--/.First slide-->
-
-                    <!--Second slide-->
-                    <div class="carousel-item">
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card mb-2">
-                                    <img class="card-img-top"
-                                         src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
-                                         alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Card title</h4>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the
-                                            card's content.</p>
-                                        <a class="btn btn-primary">Button</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="card mb-2">
-                                    <img class="card-img-top"
-                                         src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg"
-                                         alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Card title</h4>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the
-                                            card's content.</p>
-                                        <a class="btn btn-primary">Button</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="card mb-2">
-                                    <img class="card-img-top"
-                                         src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
-                                         alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Card title</h4>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the
-                                            card's content.</p>
-                                        <a class="btn btn-primary">Button</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!--/.Second slide-->
-
-                    <!--Third slide-->
-                    <div class="carousel-item">
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card mb-2">
-                                    <img class="card-img-top"
-                                         src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg"
-                                         alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Card title</h4>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the
-                                            card's content.</p>
-                                        <a class="btn btn-primary">Button</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="card mb-2">
-                                    <img class="card-img-top"
-                                         src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg"
-                                         alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Card title</h4>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the
-                                            card's content.</p>
-                                        <a class="btn btn-primary">Button</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="card mb-2">
-                                    <img class="card-img-top"
-                                         src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg"
-                                         alt="Card image cap">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Card title</h4>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the
-                                            card's content.</p>
-                                        <a class="btn btn-primary">Button</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!--/.Third slide-->
-
-                </div>
-                <!--/.Slides-->
-
-            </div>
-
-
+                @endforeach
         </div>
-    </section>
+        {{ $blogs->links() }}
 
-
-
+    </div>
 @endsection
