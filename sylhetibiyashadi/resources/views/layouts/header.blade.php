@@ -21,7 +21,7 @@
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
                         <li class="nav-item"><a class="nav-link" href="{{route('home')}}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{route('story')}}">Story</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('blog')}}">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('about')}}">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('contact')}}">Contact Us</a></li>
                     @guest

@@ -2,10 +2,9 @@
 
 @section('content')
     <div class="container py-5">
-        <h2 class="section-title text-center">Our Success Story</h2>
+        {{-- <h2 class="section-title text-center">Our Success Story</h2> --}}
         <div class="row">
                 @foreach ($blogs as $blog)
-                <?php// dd($blog); ?>
                 <div class="col-md-12 mb-5">
                     <div class="blog-single position-relative">
                         <div class="thum">
@@ -26,7 +25,7 @@
                             </div>
                         </div>
                         <h3 class="section-sub-title">{{$blog->title}}</h3>
-                        <p id="full">{!!nl2br(e($blog->description))!!}</p>
+                        <p id="full " class="text-left p-5">{!!nl2br(e($blog->description))!!}</p>
                     </div>
                 </div>
                 @endforeach

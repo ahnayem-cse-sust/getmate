@@ -1,7 +1,5 @@
 
-
-
-
+  
 
 // $('.user-carousal').slick({
 //     dots: false,

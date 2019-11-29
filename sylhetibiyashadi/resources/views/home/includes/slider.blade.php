@@ -1,4 +1,4 @@
-<section class="carosel-section">
+<section class="carosel-section position-relative">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -9,18 +9,17 @@
             <div class="carousel-item active">
                 <div class="carosel-item-single" style="background-image: url({{ asset('img/banner1.jpg') }});">
                 </div>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>.dxcv..</h5>
-                    <p>..cxvx.</p>
-                </div>
+                
             </div>
             <div class="carousel-item">
                 <div class="carosel-item-single" style="background-image: url({{ asset('img/banner2.jpg') }});">
                 </div>
+               
             </div>
             <div class="carousel-item">
                 <div class="carosel-item-single" style="background-image: url({{ asset('img/banner3.jpg') }});">
                 </div>
+                
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

@@ -16,11 +16,11 @@
     </div>
     <div class="footer-menu py-5">
         <div class="container">
-            <ul class="list-inline m-0 text-center">
+            <ul class="list-inline m-0 text-md-center text-left">
                 <li class="list-inline-item"><a href="{{route('home')}}">Home</a></li>
-                <li class="list-inline-item"><a href="#">About Us</a></li>
-                <li class="list-inline-item"><a href="{{route('story')}}">Story</a></li>
-                <li class="list-inline-item"><a href="#">Contact us</a></li>
+                <li class="list-inline-item"><a href="{{route('about')}}">About Us</a></li>
+                <li class="list-inline-item"><a href="{{route('blog')}}">Blog</a></li>
+                <li class="list-inline-item"><a href="{{route('contact')}}">Contact us</a></li>
                 {{-- <li class="list-inline-item"><a href="#">Login</a></li>
                 <li class="list-inline-item"><a href="#">Sign Up</a></li> --}}
             </ul>
