@@ -15,7 +15,7 @@ class BlogController extends Controller
     use UploadTrait;
     
     public function list(){
-        $blogs = Blog::latest()->paginate(8);
+        $blogs = Blog::latest()->paginate(5);
         // dd($blogs[1]);
         return view('pages.story')->with('blogs',$blogs);
         //return view('home.land')->with('users',$users);
