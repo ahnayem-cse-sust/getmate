@@ -17,7 +17,8 @@
                         <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Action</th>
+                            <th>Activate</th>
+                            <th>Delete</th>
                         </tr>
                         </thead>
                         <tbody>
