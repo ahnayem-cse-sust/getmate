@@ -184,9 +184,12 @@ use UploadTrait;
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        $user->syncRoles('');
+        User::destroy($id);
+        return redirect()->back();
     }
 
 

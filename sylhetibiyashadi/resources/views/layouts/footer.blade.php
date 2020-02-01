@@ -2,13 +2,13 @@
 <footer class="footer position-relative">
     <div class="social-link row py-3 py-md-5 position-relative mr-0 ml-0">
             <div class="col-3 item">
-                <a href="#" class="bouncy facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.facebook.com/sylhetibiyashadi/" class="bouncy facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
             </div>
             <div class="col-3 item">
-                <a href="#" class="bouncy twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://twitter.com/biyashadi" class="bouncy twitter" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
             <div class="col-3 item">
-                <a href="#" class="bouncy instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/sylhetbiyashadi/?f" class="bouncy instagram" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
             <div class="col-3 item">
                 <a href="#" class="bouncy youtube" target="_blank"><i class="fab fa-youtube"></i></a>

@@ -10649,7 +10649,7 @@ a.text-dark:focus {
 }
 
 .logo {
-  width: 100px;
+  width: 200px;
   padding: 0;
 }
 
@@ -10660,7 +10660,7 @@ a.text-dark:focus {
 }
 
 .navbar-expand-md .navbar-nav .nav-link {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 900;
   letter-spacing: -0.5px;
   color: #fff !important;

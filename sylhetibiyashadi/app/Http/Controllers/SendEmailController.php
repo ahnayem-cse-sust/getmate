@@ -21,7 +21,7 @@ class SendEmailController extends Controller
         
         $data= request();
        Mail::to('sylhetibiyashadi@gmail.com')->send(new ContactFormMail($data));
-       return redirect('/');
+       return redirect('/contact');
     }
      
 }

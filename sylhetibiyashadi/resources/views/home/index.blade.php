@@ -27,10 +27,10 @@
                                     @endif
                             </div>
                             <div class="profile-info">
-                                    <p><span> ID : </span>{{$user->id+400950}}</p>
-                                @hasanyrole('user|admin')
-                                    <p><span> Name : </span>{{@$user->name}}</p>
-                                @endhasanyrole
+                                <p><span> ID : </span>{{$user->id+400950}}</p>
+                                {{-- @hasanyrole('user|admin') --}}
+                                <p><span> Name : </span>{{@$user->name}}</p>
+                                {{-- @endhasanyrole --}}
                                 <p><span>Height : </span>{{@$user->userDetail->height}}</p>
                                 <p><span>Weight : </span>{{@$user->userDetail->weight}}</p>
                                 <p><span>Gender : </span>{{@$user->userDetail->gender}}</p>
@@ -38,14 +38,14 @@
                                 <p><span>Qualification : </span>{{@$user->userDetail->qualification}}</p>
                                 <p><span>Profession : </span>{{@$user->userDetail->profession}}</p>
                                 @guest
-                                <div class="text-center py-2"><a href="{{ url('/login') }}" class="btn btn-common text-center">More Details</a></div>
+                                {{-- <div class="text-center py-2"><a href="{{ url('/login') }}" class="btn btn-common text-center">More Details</a></div> --}}
                                 @endguest
-                                @hasanyrole('user|admin')
-                                    <p><span>Skin Color : </span>{{@$user->userDetail->skin_color}}</p>
-                                    <p><span>Religion : </span>{{@$user->userDetail->religion}}</p>
-                                    <p><span>Present Address : </span>{{@$user->userDetail->present_address}}</p>
-                                    <p><span> Permanent Address : </span>{{@$user->userDetail->permanent_address}}</p>
-                                @endhasanyrole
+                                {{-- @hasanyrole('user|admin') --}}
+                                <p><span>Skin Color : </span>{{@$user->userDetail->skin_color}}</p>
+                                <p><span>Religion : </span>{{@$user->userDetail->religion}}</p>
+                                <p><span>Present Address : </span>{{@$user->userDetail->present_address}}</p>
+                                <p><span> Permanent Address : </span>{{@$user->userDetail->permanent_address}}</p>
+                                {{-- @endhasanyrole --}}
                             </div>
                         </div>
                     </div>

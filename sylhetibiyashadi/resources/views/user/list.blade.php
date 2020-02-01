@@ -17,7 +17,8 @@
                         <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Action</th>
+                            <th>Activate</th>
+                            <th>Delete</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -26,6 +27,7 @@
                             <tr>
                                 <td><a href="{{route('userdetails',['id'=>$new->id])}}">{{$new->name}}</a></td>
                                 <td><a href="{{route('activate',['id'=>$new->id])}}">Activate</a></td>
+                                <td><a href="{{route('destroy',['id'=>$new->id])}}">Delete</a></td>
                             </tr>
                         @endforeach
                         </tbody>
