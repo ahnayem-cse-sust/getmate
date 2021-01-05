@@ -17,7 +17,7 @@
                         <div class="entry-meta d-flex">
                             <div class="entry-by pr-4">
                                 <span><b>Posted by - </b> </span>
-                                <span> Sylheti Biyashadi</span>
+                                <span> Sylheti  Biyashadi</span>
                             </div>
                             <div class="entry-category pl-4">
                                 <span><b> Date -</b></span>

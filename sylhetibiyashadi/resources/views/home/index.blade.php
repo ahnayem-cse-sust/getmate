@@ -43,8 +43,10 @@
                                 {{-- @hasanyrole('user|admin') --}}
                                 <p><span>Skin Color : </span>{{@$user->userDetail->skin_color}}</p>
                                 <p><span>Religion : </span>{{@$user->userDetail->religion}}</p>
-                                <p><span>Present Address : </span>{{@$user->userDetail->present_address}}</p>
-                                <p><span> Permanent Address : </span>{{@$user->userDetail->permanent_address}}</p>
+                                <p><span>Preference : </span>{{@$user->userDetail->present_address}}</p>
+                                <p><span>Phone : </span>{{@$user->userDetail->phone}}</p>
+                                <p><span>Email : </span>{{@$user->email}}</p>
+                                <p><span>Address : </span>{{@$user->userDetail->permanent_address}}</p>
                                 {{-- @endhasanyrole --}}
                             </div>
                         </div>

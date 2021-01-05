@@ -63,7 +63,7 @@
                             </div>
                             {{-- Height --}}
                             <div class="form-group row">
-                                <label for="name"
+                                <label for="height"
                                        class="col-md-4 col-form-label text-md-right">{{ __('Height') }}</label>
 
                                 <div class="col-md-8">
